@@ -1,0 +1,6 @@
+<resources>
+    <!--            key         value       -->
+    <string name="app_name">Modulo 1 Clase 1</string>
+    <string name="saludo">Hola</string>
+    <string name="txt_registro">Presionar</string>
+</resources>

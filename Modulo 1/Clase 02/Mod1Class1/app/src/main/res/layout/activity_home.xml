@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ConstraintLayout    se vincula por los cuatro lados para saber en donde estará
+LinearLayout        se acomoda de forma horizontal o vertical
+FrameLayout         se acomoda según gravedades
+RelativeLayout      permite mover los elementos a nuestro gusto
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jcodee.mod1class1.HomeActivity">
+
+    <!--
+    TextView            label, textos
+    EditText            cajas de texto
+    Button              botones
+    Spinner             combo, comboBox, dropdown
+    CheckBox            selección multiple
+    RadioButton         selección única
+    -->
+
+    <!--
+    match_parent        todo el ancho o alto de la pantalla
+    wrap_content        todo el ancho o alto del componente
+    -->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="@string/txt_registro"
+        android:textAllCaps="false" />
+
+</FrameLayout>

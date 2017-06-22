@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jcodee.mod1class1"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!--
+    package -> identificador único en la play store, solamente va a existir uno en la tienda
+    versionCode -> lel nmero de versión que se maneja internamente, el código de versión nuestro
+    versionName -> el número de versión que se le da a conocer al usuario final
+    -->
+    <!--
+    densidad    densidad por pixel          pixels
+    mdpi                1dp                 1px
+    hdpi                1dp                 1.5px
+    xhdpi               1dp                 2px
+    xxhdpi              1dp                 3px
+    xxxhdpi             1dp                 4px
+
+
+    label -> el nombre que tendrá la aplicación
+    -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait">
+            <!--
+             landscape -> horizontal
+             portrait -> vertical
+             -->
+
+            <!-- Indicamos que la pantalla o activity es el principal -->
+            <intent-filter>
+                <!--Pantalla Principal-->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- Primera pantalla en cargar -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
