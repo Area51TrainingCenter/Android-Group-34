@@ -1,0 +1,14 @@
+<resources>
+    <!--            key         value       -->
+    <string name="app_name">Modulo 1 Clase 1</string>
+    <string name="saludo">Hola</string>
+    <string name="txt_registro">Presionar</string>
+    <string name="txt_texto">Ingrese Texto</string>
+    <string name="txt_hola">Ingrese Texto</string>
+    <string name="error">No se ha escrito nada</string>
+    <string name="txt_pasar">Pasar</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_apellido">Apellido</string>
+
+    <!-- string-array -->
+</resources>
