@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+ConstraintLayout    se vincula por los cuatro lados para saber en donde estará
+LinearLayout        se acomoda de forma horizontal o vertical
+FrameLayout         se acomoda según gravedades
+RelativeLayout      permite mover los elementos a nuestro gusto
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jcodee.mod1class1.HomeActivity">
+
+    <!--
+    TextView            label, textos
+    EditText            cajas de texto
+    Button              botones
+    Spinner             combo, comboBox, dropdown
+    CheckBox            selección multiple
+    RadioButton         selección única
+    -->
+
+    <!--
+    match_parent        todo el ancho o alto de la pantalla
+    wrap_content        todo el ancho o alto del componente
+    -->
+
+    <!--
+    layout_gravity -> se mueve todo el componente
+    gravity -> se mueve el contenido del componente
+
+    margin -> se da el espacio al componente
+    padding -> se da el espacio dentro del componente
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etTexto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_hola"
+            android:inputType="text"
+            android:maxWidth="100dp"
+            android:textSize="16sp" />
+
+        <!-- inputType tipo de teclado que aparece al momento se selecciona un edittext -->
+
+        <Button
+            android:id="@+id/btnPresionar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="@string/txt_registro"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black" />
+
+        <!-- cmd + alt + l -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnPasar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/txt_pasar" />
+
+</FrameLayout>
