@@ -3,6 +3,7 @@
     package="com.jcodee.mod2class3">
 
     <application
+        android:name=".Configuracion"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
