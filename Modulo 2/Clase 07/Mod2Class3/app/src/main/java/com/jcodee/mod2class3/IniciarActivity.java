@@ -34,6 +34,11 @@ public class IniciarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_iniciar);
         ButterKnife.bind(this);
 
+        /*
+        getWindow().getWindowManager().getDefaultDisplay().getWidth();
+        getWindow().getWindowManager().getDefaultDisplay().getHeight();
+        */
+
         SharedPreferences sharedPreferences = getSharedPreferences("class3", MODE_PRIVATE);
         String usuario = sharedPreferences.getString("usuario", "");
         if (!usuario.isEmpty()) {

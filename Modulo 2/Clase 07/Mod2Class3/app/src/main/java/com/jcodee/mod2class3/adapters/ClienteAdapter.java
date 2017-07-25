@@ -3,6 +3,7 @@ package com.jcodee.mod2class3.adapters;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -17,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jcodee.mod2class3.EditarActivity;
 import com.jcodee.mod2class3.R;
 import com.jcodee.mod2class3.database.MetodoSQL;
 import com.jcodee.mod2class3.entidades.ClienteEntidad;
@@ -97,7 +99,18 @@ public class ClienteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
 
-                            cargarModificar(clienteEntidad, metodoSQL);
+                            Intent intent = new Intent(context, EditarActivity.class);
+                            intent.putExtra("id", clienteEntidad.getId());
+                            intent.putExtra("anio", clienteEntidad.getAnio());
+                            intent.putExtra("placa", clienteEntidad.getPlaca());
+                            intent.putExtra("propietario", clienteEntidad.getPropietario());
+                            intent.putExtra("modelo", clienteEntidad.getModelo().getDescripcion());
+                            intent.putExtra("marca", clienteEntidad.getModelo().getMarca().getDescripcion());
+                            context.startActivity(intent);
+
+                            //Bundle
+
+                            //cargarModificar(clienteEntidad, metodoSQL);
 
                         }
                     });
@@ -141,6 +154,7 @@ public class ClienteAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         marcas = metodoSQL.obtenerMarcas();
 
         final Dialog dialog = new Dialog(context);
+        dialog.getWindow().setLayout(500, 300);
         dialog.setContentView(R.layout.item_cliente_edit);
 
         final EditText etPlaca = (EditText) dialog.findViewById(R.id.etPlaca);

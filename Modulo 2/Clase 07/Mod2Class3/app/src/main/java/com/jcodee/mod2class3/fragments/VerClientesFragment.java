@@ -28,6 +28,7 @@ public class VerClientesFragment extends Fragment {
     Unbinder unbinder;
 
     private MetodoSQL metodoSQL;
+    private ClienteAdapter adapter;
 
     public VerClientesFragment() {
         // Required empty public constructor
@@ -43,11 +44,18 @@ public class VerClientesFragment extends Fragment {
 
         metodoSQL = new MetodoSQL();
 
-        ClienteAdapter adapter = new ClienteAdapter(getActivity(), metodoSQL.obtenerClientes());
+        adapter = new ClienteAdapter(getActivity(), metodoSQL.obtenerClientes());
         rvDatos.setLayoutManager(new LinearLayoutManager(getActivity()));
         rvDatos.setAdapter(adapter);
 
         return view;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        adapter.notifyDataSetChanged();
     }
 
     @Override
